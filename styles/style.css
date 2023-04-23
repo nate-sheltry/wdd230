@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;800;900&display=swap');
+:root {
+    --width: 60vw;
+    --height: 100vh;
+    --font: 'Source Code Pro', monospace;
+    --box-color: #1D67BA;
+}
+
+body {
+    max-width: var(--width);
+    margin: auto;
+    font-family: var(--font)
+}
+
+#info_box {
+    background-color: var(--box-color);
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    border: .5rem solid var(--box-color);
+    border-radius: 2rem / 2rem;
+    box-shadow: 0rem 0rem 5rem black;
+    margin: 1vw;
+}
+img {
+    max-width: var(--width) * 1/4;
+    max-height: 30vh;
+    margin: 1.5vw;
+    box-shadow: 0rem 0rem 3rem black;
+}
+h1 {
+    font-size: 3vw;
+    align-self: center;
+    font-weight:900;
+    color: white;
+}
+h2 {
+    font-size: 2vw;
+    font-weight:800;
+    text-shadow: 0rem 0rem 2rem black;
+}
+ul {
+    font-size: 1vw;
+}
+li {
+    margin: 1vh 0px 1vh 3vw;
+    font-weight: 600;
+}
+footer {
+    background-color: var(--box-color);
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto;
+    border: .5rem solid var(--box-color);
+    border-radius: 2rem / 2rem;
+    box-shadow: 0rem 0rem 5rem black;
+    margin: 1vw;
+    font-weight: 700;
+    color: white;
+}
+p:last-child {
+    color: yellow;
+}
