@@ -23,7 +23,7 @@ body {
     margin: 1vw;
 }
 img {
-    max-width: var(--width) * 1/4;
+    max-width: 15vw;
     max-height: 30vh;
     margin: 1.5vw;
     box-shadow: 0rem 0rem 3rem black;
