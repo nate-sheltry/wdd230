@@ -1,0 +1,87 @@
+
+body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 7.5vw 0px 7.5vw;
+}
+
+header {
+    background: darkslategray;
+    grid-column: 1/4;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px white;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+img {
+    max-width: 300px;
+    align-self: center;
+    margin: auto;
+    border: 2px darkgrey solid
+}
+
+h2 {
+    font-family: 'Instrument Serif', serif;
+    background-color: grey;
+    border: 1px darkgrey solid;
+    border-radius: 10px 10px 0px 0px;
+    margin: -10px -10px 0px -10px;
+    padding: 9px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+span, a {
+    font-weight: 700;
+    text-align: center;
+}
+
+a {
+    padding: 10px;
+}
+
+span {font-size:24px;}
+
+#one, #two, #three {
+    display: flex;
+    flex-direction:column;
+    margin: 10px;
+    background: lightgrey;
+    border: 4px darkgrey solid;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#one {grid-column: 1;}
+#two {grid-column: 2;}
+#three {grid-column: 3;}
+
+footer {
+    grid-column: 1/4;
+    background-color: darkslategray;
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto;
+    margin: 1vw;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+footer span{
+    font-size: 18px;
+}
+footer p:last-child {
+    color: yellow;
+}
