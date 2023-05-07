@@ -1,0 +1,30 @@
+@media only screen and (min-width: 36em){
+    nav {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content:unset;
+        padding: 20px 0px 20px 0px;
+    }
+    nav a{
+        font-size: 20px;
+    }
+    header {
+        padding:0px 0px 0px 0px;
+    }
+    footer {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 58em){
+    .color-profile {
+        width: 325px;
+        height: 325px;
+    }
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+
+    }
+}
