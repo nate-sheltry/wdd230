@@ -2,8 +2,15 @@
 :root {
     --width: 60vw;
     --height: 100vh;
-    --font: 'Source Code Pro', monospace;
-    --box-color: #1D67BA;
+
+    --heading-font: 'EB Garamond', serif;
+    --paragraph-font: 'Lato', sans-serif;
+    
+    --primary-color: #162a35;
+    --secondary-color: #7faeed;
+    --accent1-color: #005b8d;
+    --accent2-color: #01c5f7;
+    --heading-color: #20bcbc;
 }
 
 body {

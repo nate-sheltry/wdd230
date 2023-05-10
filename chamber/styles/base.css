@@ -1,0 +1,101 @@
+:root {
+    --width: 90vw;
+    --height: 100vh;
+    --font: 'Source Code Pro', monospace;
+    --box-color: #1D67BA;
+}
+
+body {
+    margin: auto;
+    font-family: var(--font)
+}
+
+main {
+    max-width: var(--width);
+    margin:auto;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    grid-template-columns: fit-content auto auto;
+    background-color: #505050;
+}
+#header-logo {
+    width: 100px;
+    max-width:214px;
+    margin: 5px;
+}
+#header-logo img {
+    width: 100%;
+    background-color:grey;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+header div {
+    color: white;
+    font-size: 20px;
+}
+header div span {
+    font-size: 14px;
+    font-weight: 900;
+}
+header nav a img {
+    max-width: 26px;
+}
+header nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:min-content;
+}
+header nav a {
+    grid-row: 1;
+    margin: auto;
+}
+
+.navigation {
+    grid-column: 3;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.navigation li:first-child {
+    display:block;
+    border: 1px solid grey;
+    color: white;
+    max-width: fit-content;
+    padding: 7px 9px;
+}
+.navigation li {
+    display:none;
+}
+
+.responsive li {
+    display: block;
+    margin: auto;
+    padding: 5px 2px;
+    overflow-inline:auto;
+}
+
+
+#date {
+    grid-row: 2;
+    grid-column: 1/4;
+}
+
+section {
+    background-color: lightgray;
+    padding: 15px;
+    border: 1px solid grey;
+    min-height: 150px;
+    margin: 10px 0;
+}
+
+#spotlights div {
+    border: 1px solid grey;
+    min-height: 150px;
+    padding: 15px;
+}
+section:last-child {
+    visibility:hidden;
+}
