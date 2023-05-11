@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script rel="script" src="scripts/script.js"></script>
-    <!--<script rel="script" defer src="../scripts/script.js"></script>-->
+    <script rel="script" defer src="scripts/script.js"></script>
+    <script rel="script" defer src="../scripts/script.js"></script>
 </head>
 <body>
     <header>
@@ -30,10 +30,12 @@
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+        </nav>
+        <div id="social-media">
             <a href="#"><img src="images/facebook.png" alt="facebook-logo"></a>
             <a href="#"><img src="images/linkedin.png" alt="linkedin-logo"></a>
-        </nav>
-        <span id="date">sd</span>
+        </div>
+        <time></time>
     </header>
     <main>
         <section>
@@ -61,15 +63,23 @@
         <a><img src="images/logo-large.png"></a>
         <div>
             <span>Little Creek Chamber of Commerce</span>
+            <br>
             50324 East Carway Road<br>Little Creek, Arizona 50678
         </div>
         <div>
-            info@littlcreekcc.org<br>
-            +(9999)-7777-4012<br>
-            Location Map
+            <p>info@littlcreekcc.org</p>
+            <p>+(9999)-7777-4012</p>
+            <p>&#128205; Location Map</p>
         </div>
+        <hr>
         <div>
-            &copy; Little Creek Chamber | <b>Nathaniel Dunham</b> | WDD 230 Project |<br>
+            &copy; <span id="footer_year"></span> Little Creek Chamber
+            <span>|</span> 
+            <div><b>Nathaniel Dunham</b></div>
+            <span>|</span> 
+            WDD 230 Project
+            <span>|</span>
+            <br>
             Last Modification: <span id="last_modified_date"></span>
         </div>
     </footer>
