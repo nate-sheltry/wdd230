@@ -2,6 +2,21 @@
     --width: 90vw;
     --height: 100vh;
     --font: 'Source Code Pro', monospace;
+
+    --primary-color: #162a35;
+    --secondary-color: #8faddc;
+    --accent1-color: #005b8d;
+    --accent2-color: #01c5f7;
+    --heading-color: #20bcbc;
+    
+    --heading-font: 'Lato', sans-serif;
+    --paragraph-font: 'EB Garamond', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+p, span {
+    font-family: var(--paragraph-font);
 }
 
 hr {
@@ -11,7 +26,8 @@ hr {
 
 body {
     margin: auto;
-    font-family: var(--font)
+    font-family: var(--font);
+    background-color: lightgrey;
 }
 
 main {
@@ -25,7 +41,7 @@ header {
     width: 100%;
     grid-template-columns: 49% 22% auto;
     grid-template-rows: auto auto auto auto;
-    background-color: #505050;
+    background-color: var(--primary-color);
 }
 #header-logo {
     grid-column: 1/4;
@@ -36,9 +52,6 @@ header {
 }
 #header-logo img {
     width: 100%;
-    background-color:grey;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
     margin: auto;
 }
 header div {
@@ -100,7 +113,8 @@ header nav{
 }
 .navigation li {
     display:none;
-    font-size: .9em;
+    font-size: 1em;
+    margin-top: 10px;
 }
 .navigation li a {
     display:inline-block;
@@ -125,8 +139,8 @@ header time {
     width: var(--width);
     grid-row: 4;
     grid-column: 1/4;
-    border: 1px solid lightgrey;
-    background-color: grey;
+    border: 1px solid var(--accent2-color);
+    background-color: var(--accent1-color);
     color:white;
     text-align: center;
     margin: 5px auto;
@@ -135,9 +149,9 @@ header time {
 }
 
 section {
-    background-color: lightgray;
+    background-color: var(--secondary-color);
     padding: 15px;
-    border: 1px solid grey;
+    border: 1px solid var(--accent1-color);
     min-height: 150px;
     margin: 10px 0;
 }
@@ -148,7 +162,7 @@ section {
 }
 
 .spotlight {
-    border: 1px solid grey;
+    border: 1px solid var(--accent1-color                                                                 );
     min-height: 150px;
     padding: 15px;
 }
@@ -160,7 +174,7 @@ section {
 }
 
 footer {
-    background-color: #505050;
+    background-color: var(--primary-color);
     display: grid;
     text-align: center;
     grid-template-columns: auto;
@@ -176,9 +190,6 @@ footer a {
 }
 footer a img {
     width: 100%;
-    background-color:grey;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
     margin: 3px auto;
 }
 

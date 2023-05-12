@@ -64,7 +64,6 @@
         width: 100%;
         grid-template-columns: 25% 37% 17% auto;
         grid-template-rows: auto auto auto;
-        background-color: #505050;
     }
     #header-logo {
         grid-column: 1;
