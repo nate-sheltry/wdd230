@@ -100,7 +100,8 @@
 
     footer a {
         max-width: 321px;
-        margin: .3em;
+        margin: .1em .3em 0em .3em;
+        justify-content:center;
     }
     #bottom_of_footer {
         grid-column: 1/4;
@@ -111,6 +112,9 @@
     }
     #bottom_of_footer hr {
         grid-column: 1/3;
+    }
+    #footer_chamber_info {
+        margin: auto 2em;
     }
     #footer_chamber_info span {
         text-align: left;

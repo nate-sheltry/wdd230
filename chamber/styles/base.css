@@ -225,3 +225,8 @@ footer a img {
 #bottom_of_footer br {
     display: none;
 }
+#contact_info p a {
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+}
