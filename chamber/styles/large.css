@@ -92,6 +92,9 @@
     section {
         margin: 4px 4px;
     }
+    #spotlights h2:last-of-type {
+        display:inline-block;
+    }
 
     footer {
         grid-template-columns: 321px auto auto;
