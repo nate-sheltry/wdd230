@@ -1,12 +1,164 @@
 @media only screen and (min-width: 32.5em){
+    footer {
+        display: grid;
+        grid-template-columns: 28% 36% auto;
+        grid-template-rows: 60% 40%;
+    }
+    footer a, #footer_chamber_info, #contact_info {
+        grid-row: 1;
+    }
+    footer a {
+        display:block;
+        width: 100%;
+        margin: auto .4em;
+    }
+    #footer_chamber_info {
+        grid-column: 2;
+        text-align: left;
+        margin: auto 1vw auto 2vw;
+    }
+    #footer_chamber_info span {
+        text-align: left;
+        font-size: 1em;
+    }
+    #footer_chamber_info div {
+        font-size: .8em;
+    }
+    #contact_info {
+        grid-column: 3;
+        margin: auto;
+        font-size: 18px;
+    }
+    #contact_info p {
+        margin: 0;
+    }
+    #bottom_of_footer, #footer_date {
+        grid-column: 1/4;
+    }
+    #bottom_of_footer {
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        margin: .5em 0px .5em 0px;
+    }
+    #bottom_of_footer hr {
+        grid-row:1;
+    }
+    #bottom_of_footer #footer_info {
+        grid-row:2;
+        font-size: .75em;
+    }
+    #bottom_of_footer #footer_date {
+        grid-row: 3;
+        font-size: .75em;
+    }
+    
+    .line {
+        display: inline-block;
+        visibility: visible;
+        font-size: 1em;
+    }
+    header {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 25% 37% 17% auto;
+        grid-template-rows: auto auto auto;
+        background-color: #505050;
+    }
+    #header-logo {
+        grid-column: 1;
+        width: max(120px, 15vw);
+        margin: .3em auto .3em 1vw;
+    }
+    header div, #social-media {
+        grid-row: 1;
+    }
+    header div {
+        grid-column: 2;
+        color: white;
+        font-size: 24px;
+        margin: auto 0;
+    }
+    header div span {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    #social-media {
+        grid-column: 3;
+    }
+    .navigation li {
+        text-align: right;
+        font-size: 1.2em;
+    }
     .navigation {
-        display: flex;
+        flex-flow:row-reverse;
+    
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 2px 0 auto auto;
     }
-    .navigation li:first-child{
-        display: none;
+    .navigation li:first-child {
+        display:block;
+        border: 1px solid grey;
+        color: white;
+        font-size: 1.1em;
+        max-width: fit-content;
+        padding: 7px 9px;
+        margin: auto 5vw auto auto;
     }
-    .navigation li{
+    .navigation li:first-child a {
+        margin: auto;
+    }
+    .navigation li a {
+        display:inline-block;
+        text-decoration:none;
+        color: white;
+        margin: 7.5px 5px 0px 0px;
+    }
+    header nav{
         display: block;
-        flex: 1 1 100%;
+        grid-column: 4;
+        grid-row: 1/3;
+        margin: auto 0px auto 10px;
+    }
+    header time {
+        grid-column: 1/5;
+    }
+    main {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, auto);
+    }
+    section {
+        margin: 4px 4px;
+    }
+    #spotlights {
+        display: flex;
+        flex-direction: row;
+        grid-row: 3;
+    }
+    .spotlight {
+        width: 50%;
+        margin: 2px 2px;
+    }
+    #news {
+        grid-row: 2;
+    }
+    #join {
+        display: block;
+        grid-row: 4;
+    }
+    #weath_event {
+        display: flex;
+        flex-direction: row;
+        grid-row: 5;
+    }
+    #event {
+        width: 60%;
+    }
+    #weather {
+        width: 35%;
     }
 }

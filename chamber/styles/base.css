@@ -23,15 +23,16 @@ main {
 header {
     display: grid;
     width: 100%;
-    grid-template-columns: 28% 36% 16% auto;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 49% 22% auto;
+    grid-template-rows: auto auto auto auto;
     background-color: #505050;
 }
 #header-logo {
-    grid-column: 1;
-    width: 100px;
+    grid-column: 1/4;
+    grid-row: 1;
+    width: 200px;
     max-width:214px;
-    margin: 3px 5px;
+    margin: 3px auto;
 }
 #header-logo img {
     width: 100%;
@@ -41,31 +42,37 @@ header {
     margin: auto;
 }
 header div {
+    grid-row: 2;
+    display:inline-block;
     color: white;
-    font-size: 20px;
-    margin: auto 0;
+    font-size: 1.1em;
+    font-weight: 900;
+    margin: auto 0px auto 10px;
 }
 header div span {
-    font-size: 14px;
-    font-weight: 900;
+    display:inline-block;
+    font-size: .6em;
+    margin: 0px;
 }
 #social-media {
-    grid-column: 3;
-    grid-row: 1;
+    grid-column: 2;
+    grid-row: 2;
     margin: auto;
 }
 #social-media a {
     display:inline-block;
-    height: 26px;
-    width: 26px;
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    padding: 0;
 }
 #social-media a img {
     max-height: 100%;
     max-width: 100%;
 }
 header nav{
-    grid-column: 4;
-    grid-row: 1/6;
+    grid-column: 3;
+    grid-row: 2/4;
     display: flex;
     flex-direction: row;
     flex-wrap:nowrap;
@@ -77,20 +84,29 @@ header nav{
     list-style: none;
     text-align: center;
     padding: 0;
-    margin: auto;
+    margin: 2px 0 auto auto;
 }
 .navigation li:first-child {
     display:block;
     border: 1px solid grey;
     color: white;
+    font-size: 1.1em;
     max-width: fit-content;
     padding: 7px 9px;
+    margin: auto 2.5vw auto 0;
+}
+.navigation li:first-child a {
+    margin: auto;
 }
 .navigation li {
     display:none;
+    font-size: .9em;
 }
 .navigation li a {
+    display:inline-block;
     text-decoration:none;
+    color: white;
+    margin: 7.5px 5px 0px 0px;
 }
 
 .response {
@@ -100,7 +116,6 @@ header nav{
 
 .responsive li {
     display: block;
-    margin: auto;
     padding: 5px 2px;
     overflow-inline:auto;
 }
@@ -108,8 +123,8 @@ header nav{
 
 header time {
     width: var(--width);
-    grid-row: 6;
-    grid-column: 1/5;
+    grid-row: 4;
+    grid-column: 1/4;
     border: 1px solid lightgrey;
     background-color: grey;
     color:white;
@@ -127,13 +142,21 @@ section {
     margin: 10px 0;
 }
 
-#spotlights div {
+#spotlights {
+    display:flex;
+    flex-direction:column;
+}
+
+.spotlight {
     border: 1px solid grey;
     min-height: 150px;
     padding: 15px;
 }
-section:last-child {
-    visibility:hidden;
+.spotlight:last-of-type {
+    display: none;
+}
+#join {
+    display: none;
 }
 
 footer {
@@ -143,7 +166,7 @@ footer {
     grid-template-columns: auto;
     font-size: 3vw;
     color: white;
-    margin: -100px 0;
+    margin: 0px 0;
 }
 
 footer a {
@@ -159,7 +182,7 @@ footer a img {
     margin: 3px auto;
 }
 
-footer div span{
+#footer_author{
     font-size:1.25em;
 }
 #last_modified_date, #footer_year {
@@ -168,25 +191,26 @@ footer div span{
     font-style: normal;
     font-size: 1em;
 }
-footer div:first-of-type span {
+#footer_chamber_info span {
     font-weight:700;
+    font-size:1.25em;
 }
-footer div:first-of-type {
+#footer_chamber_info {
     font-style: italic;
     margin: 5px auto;
 }
-footer div:first-of-type {
+#footer_chamber_info {
     font-size: 1em;
 }
-footer div:last-of-type div {
+#bottom_of_footer div {
     font-style:normal;
     font-size: 1.1em;
 }
-footer div:last-of-type span {
+.line {
     display: block;
     visibility: hidden;
     font-size: 0px;
 }
-footer div:last-of-type br {
+#bottom_of_footer br {
     display: none;
 }
