@@ -23,6 +23,7 @@ __button.addEventListener("click", () => {
     button.addEventListener("click", (e) => {
         removeEventListener("click", e.target)
         e.target.parentElement.remove();
+        __input.value = '';
         __input.focus();
     });
 
