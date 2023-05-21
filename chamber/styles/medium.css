@@ -62,11 +62,11 @@
     header {
         display: grid;
         width: 100%;
-        grid-template-columns: 25% 37% 17% auto;
+        grid-template-columns: auto auto auto 17%;
         grid-template-rows: auto auto auto;
     }
     #header-logo {
-        grid-column: 1;
+        grid-column: 2;
         width: max(120px, 15vw);
         margin: .3em auto .3em 1vw;
     }
@@ -74,7 +74,7 @@
         grid-row: 1;
     }
     header div {
-        grid-column: 2;
+        grid-column: 3;
         color: white;
         font-size: 24px;
         margin: auto 0;
@@ -84,19 +84,22 @@
         font-weight: 900;
     }
     #social-media {
-        grid-column: 3;
+        grid-column: 4;
     }
     .navigation li {
-        text-align: right;
+        text-align: left;
         font-size: 1.2em;
+        margin: 0px;
     }
     .navigation {
         flex-flow:row-reverse;
-    
         list-style: none;
-        text-align: center;
+        text-align: left;
         padding: 0;
-        margin: 2px 0 auto auto;
+        position: relative;
+        left: 5%;
+        bottom: 0%;
+        margin-top:5px;
     }
     .navigation li:first-child {
         display:block;
@@ -105,7 +108,7 @@
         font-size: 1.1em;
         max-width: fit-content;
         padding: 7px 9px;
-        margin: auto 5vw auto auto;
+        margin: 0px;
     }
     .navigation li:first-child a {
         margin: auto;
@@ -118,9 +121,9 @@
     }
     header nav{
         display: block;
-        grid-column: 4;
+        grid-column: 1;
         grid-row: 1/3;
-        margin: auto 0px auto 10px;
+        margin: 5px 0px 0px 10px;
     }
     header time {
         grid-column: 1/5;
