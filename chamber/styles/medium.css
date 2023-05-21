@@ -133,14 +133,14 @@
     section {
         margin: 4px 4px;
     }
+    #spotlights, #join {
+        margin: 4px 4px;
+    }
     #spotlights {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto auto;
         grid-row: 3;
-    }
-    #spotlights h2 {
-        grid-row: 1;
     }
     .spotlight {
         width: auto;

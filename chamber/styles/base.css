@@ -25,11 +25,21 @@ hr {
     color: black;
 }
 
+h2 {
+    color: var(--accent1-color);
+    text-shadow: 1px 0px 2px var(--primary-color);
+    text-shadow: 0px 0px 4px var(--accent1-color);
+    font-size: 1.4em;
+    text-align: center;
+    margin: 10px 0px;
+}
+
 body {
     margin: auto;
     font-family: var(--font);
     background-color: lightgrey;
 }
+
 
 main {
     max-width: var(--width);
@@ -91,15 +101,30 @@ header nav{
     flex-direction: row;
     flex-wrap:nowrap;
 }
+.navigation li:hover{
+    background-color:var(--accent1-color);
+}
+.navigation li:hover a{
+    text-shadow: 1px 0px 1px white;
+    transition: all .1s;
+}
+#social-media a:hover{
+    background-color:var(--accent1-color);
+    border: 0px solid var(--accent1-color);
+    border-radius: .3em;
+    transform:scale(1.1, 1.1);
+    transition:all .2s;
+}
 
 .navigation {
     flex-flow:row-reverse;
-
+    vertical-align:middle;
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 2px 0 auto auto;
 }
+
 .navigation li:first-child {
     display:block;
     border: 1px solid grey;
@@ -115,13 +140,14 @@ header nav{
 .navigation li {
     display:none;
     font-size: 1em;
-    margin-top: 10px;
+    margin: auto auto;
+    justify-items:center;
 }
 .navigation li a {
-    display:inline-block;
+    display:block;
     text-decoration:none;
     color: white;
-    margin: 7.5px 5px 0px 0px;
+    margin: 7.5px 5px 0px;
 }
 
 .response {
@@ -150,31 +176,150 @@ header time {
 
 section {
     background-color: var(--secondary-color);
-    padding: 15px;
+    padding: 10px 15px;
     border: 1px solid var(--accent1-color);
     min-height: 150px;
+    height: auto;
     margin: 10px 0;
+    text-align:center;
+}
+
+.hero h1 {
+    position: absolute;
+    padding: 15px;
+    font-size: 2em;
+    color: var(--heading-color);
+    text-shadow: 1px 0px 1px var(--heading-color);
+    text-shadow: 2px 0px 2px var(--primary-color), 0px 1px 2px var(--primary-color), -2px 0px 1px var(--accent2-color);
+}
+main .hero button {
+    position:absolute;
+    bottom: calc(12%);
+    right: calc(5%);
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: .5em;
+    background-color: var(--accent1-color);
+    box-shadow: 0px 2px 16px black;
+    color: white;
+    font-size: 1.8em;
+    text-shadow: 1px 0px 1px white;
+    opacity: .95;
+}
+
+.hero {
+    position: relative;
+    padding: 0px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #spotlights {
     display:flex;
     flex-direction:column;
+    min-width: 230px;
 }
-#spotlights h2:last-of-type {
-    display:none;
+
+#spotlights, #join {
+    background-color: var(--secondary-color);
+    padding: 10px 15px;
+    border: 1px solid var(--accent1-color);
+    min-height: 150px;
+    height: auto;
+    margin: 10px 0;
+    text-align:center;
 }
 
 .spotlight {
     border: 1px solid var(--accent1-color                                                                 );
     min-height: 150px;
-    padding: 15px;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-shadow: -2px -2px 16px var(--accent1-color), 2px 2px 16px var(--accent1-color);
 }
 .spotlight:last-of-type {
     display: none;
 }
+.spotlight div {
+    height: 75px;
+}
+.spotlight div img {
+    max-height: 100%;
+}
 #join {
     display: none;
 }
+#join button {
+    width: 80%;
+    padding: 5px 0px;
+    border: 0px;
+    border-radius: .5em;
+    background-color: var(--accent1-color);
+    box-shadow: 0px 2px 16px black;
+    color: white;
+    font-size: 1.4em;
+    text-shadow: 1px 0px 1px white;
+    opacity: .95;
+}
+
+#weather {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+}
+#weather h2 {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+#weather div:first-of-type {
+    grid-row: 2;
+    grid-column: 1;
+}
+#weather div:first-of-type img {
+    height: 100%;
+    width: 100%;
+}
+.weather_info {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    grid-column: 2;
+    color: white;
+}
+.weather_info span:first-child {
+    font-size: 2em;
+    margin: auto;
+}
+.weather_info span:last-child {
+    font-size: 1.3em;
+    text-shadow: 1px 0px .75px white;
+
+}
+#weather hr {
+    grid-row: 3;
+    grid-column: 1/3;
+}
+.weather_chill-speed {
+    display: grid;
+    grid-row: 4;
+    grid-column: 1/3;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+.weather_chill-speed span{
+    margin: 2px auto;
+}
+.weather_chill-speed span:first-child, .weather_chill-speed span:nth-child(3) {
+    grid-column: 1;
+}
+.weather_chill-speed span:last-child, .weather_chill-speed span:nth-child(2) {
+    grid-column: 2;
+}
+
 
 footer {
     background-color: var(--primary-color);
@@ -232,4 +377,20 @@ footer a img {
     display:inline-block;
     text-decoration: none;
     color: white;
+}
+
+.banner {
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--accent1-color);
+}
+.banner h2 {
+    font-size: 2em;
+    text-shadow: 1px 0px .75px black;
+}
+.banner p {
+    font-size: 1.4em;
+    color: yellow;
 }
