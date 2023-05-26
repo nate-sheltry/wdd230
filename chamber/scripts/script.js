@@ -9,7 +9,6 @@ function toggleMenu(){
 
 // select the DOM elements to manipulate (we will output to these)
 const datefield = document.querySelector("time");
-const date = new Date()
 // for european/family history format with day first.
 
 // derive the current date using a date object
@@ -21,7 +20,7 @@ const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 datefield.textContent = fulldate;
 datefield.dateTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
 
-if(date.getDay() == 1 | date.getDay() == 2){
+if(date.getDay() == 1 || date.getDay() == 2){
     let __banner = document.createElement("div")
     let __title = document.createElement("h2")
     let __line = document.createElement("hr")

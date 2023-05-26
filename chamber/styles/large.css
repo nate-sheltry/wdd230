@@ -115,9 +115,13 @@
         grid-template-columns: 321px auto auto;
         grid-template-rows: 60% 40%;
     }
-
     footer a {
+        width: 100%;
+    }
+    footer a picture {
+        display:block;
         max-width: 321px;
+        width: 100%;
         margin: .1em .3em 0em .3em;
         justify-content:center;
     }

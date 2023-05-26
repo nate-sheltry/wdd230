@@ -15,12 +15,19 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script rel="script" defer src="scripts/script.js"></script>
     <script rel="script" defer src="../scripts/script.js"></script>
+    <script rel="script" defer src="scripts/script.js"></script>
+    <script rel="script" defer src="scripts/windchill.js"></script>
 </head>
 <body>
     <header>
-        <a id="header-logo" href="#"><img src="images/logo.png" alt="Little Creek Chamber Logo"></a>
+        <a id="header-logo" href="#">
+            <picture>
+                <source srcset="images/large/logo-large.webp" media="(min-width: 1024px)">
+                <source srcset="images/medium/logo-medium.webp" media="(min-width: 520px)">
+                <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
+            </picture>
+        </a>
         <div>Little Creek<br><span>Chamber of Commerce</span></div>
         <nav>
             <ul class="navigation">
@@ -41,8 +48,11 @@
         <section class="hero">
             <h1>Welcome to Little Creek</h1>
             <button type="button" onclick="">Join the Chamber</button>
-            <img alt="hero_image" src="images/hero_img.jpg">
-            
+            <picture>
+                <source srcset="images/medium/wdd230-org-medium.webp" media="(min-width:520px) and (max-width:1023px)">
+                <source srcset="images/large/wdd230-org-large.webp" media="(min-width:1024px)">
+                <img alt="hero_image" src="images/small/wdd230-org-small.webp">
+            </picture>
         </section>
         <div id="weath_event">
             <section id="event">
@@ -53,15 +63,17 @@
             </section>
             <section id="weather">
                 <h2>Weather</h2>
-                <div><img src="images/weather/cloudy.png" alt="weather_img"></div>
+                <picture>
+                    <img src="images/weather/cloudy.webp" alt="weather_img">
+                </picture>
                 <div class="weather_info">
-                    <span>72°F</span>
-                    <span>Partly Cloudy</span>
+                    <span class="temperature">42°F</span>
+                    <span class="weather_descriptor">Partly Cloudy</span>
                 </div>
                 <hr>
                 <div class="weather_chill-speed">
-                    <span>Wind Speed:</span><span class="wind_speed">2.5 km/h</span>
-                    <span>Wind Chill:</span><span class="wind_chill">N/A</span>
+                    <span>Wind Speed:</span><span class="wind_speed">4 mph</span>
+                    <span>Wind Chill:</span><span class="wind_chill"></span>
                 </div>
             </section>
         </div>
@@ -81,7 +93,7 @@
             </div>
             <div class="spotlight">
                 <h2>Code Primera</h2>
-                <div><img src="images/code_pencils.png" alt="code_pencils_img"></div>
+                <div><img src="images/code_pencils.webp" alt="code_pencils_img"></div>
                 <p class="subtitle"><i>An after school coding instructional program.</i></p>
                 <hr>
                 <span>contact@codeprimera.com</span>
@@ -90,7 +102,7 @@
             </div>
             <div class="spotlight">
                 <h2>Build A Treefort</h2>
-                <div><img src="images/tree_house.png" alt="tree_house_img"></div>
+                <div><img src="images/tree_house.webp" alt="tree_house_img"></div>
                 <p class="subtitle"><i>Over 1000 Plans!</i></p>
                 <hr>
                 <span>builda@treefort.com</span>
@@ -105,7 +117,13 @@
             </div>
     </main>
     <footer>
-        <a><img src="images/logo-large.png" alt="Little Creek Chamber Logo"></a>
+        <a href="#">
+            <picture>
+                <source srcset="images/medium/logo-medium.webp" media="(min-width:520px) and (max-width:1023px)">
+                <source srcset="images/large/logo-large.webp" media="(min-width:1024px)">
+                <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
+            </picture>
+        </a>
         <div id="footer_chamber_info">
             <span>Little Creek Chamber of Commerce</span>
             <br>
