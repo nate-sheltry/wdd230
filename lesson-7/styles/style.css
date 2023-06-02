@@ -1,0 +1,20 @@
+
+body main {
+    display: flex;
+    flex-direction: column;
+}
+picture, h1 {
+    margin: 5px auto;
+}
+
+picture img[data-src]{
+    filter: blur(0.2em);
+}
+picture img {
+    transition: filter, transform 0.5s;
+    border: 2px solid black;
+    box-shadow: 0px 0px 2px black;
+}
+picture:hover img {
+    transform: scale(1.05, 1.05)
+}
