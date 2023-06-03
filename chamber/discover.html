@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The town of Little Creek's Chamber of Commerce website aims to
+    provide valuable information, education, and resources to local businesses in the area of Little Creek.">
+    <title>Little Creek Chamber - Discover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script rel="script" defer src="scripts/script.js"></script>
+    <script rel="script" defer src="scripts/windchill.js"></script>
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="#">
+            <picture>
+                <source srcset="images/large/logo-large.webp" media="(min-width: 1024px)">
+                <source srcset="images/medium/logo-medium.webp" media="(min-width: 520px)">
+                <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
+            </picture>
+        </a>
+        <div>Little Creek<br><span>Chamber of Commerce</span></div>
+        <nav>
+            <ul class="navigation">
+                <li><a onclick="toggleMenu()">&#9776;</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#"><img src="images/facebook.png" alt="facebook-logo"></a>
+            <a href="#"><img src="images/linkedin.png" alt="linkedin-logo"></a>
+        </div>
+        <time datetime="2023-05-19 20:00"></time>
+    </header>
+    <main id="discover_page">
+        <section>
+            <h2>Last visited</h2>
+            <p>
+                Days: &nbsp;<span class="days_ago"></span>, &nbsp;
+                Hours :&nbsp;<span class="hours_ago"></span>,&nbsp; <br>
+                Minutes: &nbsp;<span class="minutes_ago"></span>,&nbsp; 
+                Seconds: &nbsp;<span class="seconds_ago"></span>
+            </p>
+        </section>
+        <div class="spotlights" id="discover_grid">
+            <div class="spotlight">
+                <h2>Welome to Little Creek</h2>
+                <picture>
+                    <img src="images/discover/welcome_photo_placeholder.webp" data-src="images/discover/welcome_photo.webp" alt="Little Creek Sign.webp" loading="lazy">
+                </picture>
+                <p>Welcome to the town of Little Creek! A small town in Delaware near the Bayshore Byway.</p>
+            </div>
+            <div class="spotlight">
+                <h2>Enjoy Access to the Water</h2>
+                <picture>
+                    <img src="images/discover/wildlife_photo_placeholder.webp" data-src="images/discover/wildlife_photo.webp" alt="Little Creek Sign.webp" loading="lazy">
+                </picture>
+                <p>Visit Little Landing, Wildlife Haven. With access to the water, enjoy the various water based activities,
+                     such as boating and fishing, while enjoying the wilfdlife.</p>
+            </div>
+            <div class="spotlight">
+                <h2>Experience the Rich History</h2>
+                <picture>
+                    <img src="images/discover/history_photo_placeholder.webp" data-src="images/discover/history_photo.webp" alt="Little Creek Sign.webp" loading="lazy">
+                </picture>
+                <p>Little Creek was first inhabited by pirates, before becoming a very prosperous town in the 1800's due to the oyster industry thriving.
+                    As such, Little Creek has a rich history from its foundings which can be seen in the town's architecture.
+                </p>
+            </div>
+            <div class="spotlight">
+                <h2>Relax at Pickering Beach</h2>
+                <picture>
+                    <img src="images/discover/beach_photo_placeholder.webp" data-src="images/discover/beach_photo.webp" alt="Little Creek Sign.webp" loading="lazy">
+                </picture>
+                <p> At Pickering beach, you will be witness to the hundreds and thousands of horshoe crab that arrive during the spring into early summer.
+                    Bird watchers will be able to view the shore birds, as they feed off the horshoe crabs eggs.
+                </p>
+            </div>
+            <div class="spotlight">
+                <h2>Observe Birds at the Main Tract</h2>
+                <picture>
+                    <img src="images/discover/bird-watching_photo_placeholder.webp" data-src="images/discover/bird-watching_photo.webp" alt="Little Creek Sign.webp" loading="lazy">
+                </picture>
+                <p>At the Main Tract you will be able to see various waterbirds and waterfowl from the
+                    observation tower, leading to great views and wonderful sights.
+                </p>
+            </div>
+            <div class="spotlight">
+                <h2>Visit Old Stone Tavern</h2>
+                <picture>
+                    <img src="images/discover/old-stone-tavern_photo_placeholder.webp" data-src="images/discover/old-stone-tavern_photo.webp" alt="Little Creek Sign.webp" loading="lazy">
+                </picture>
+                <p>A historic name located in Little Creek, this home is a gregorian-style house with a kitchen
+                    wing attached. The original owners owned a tavern, but the name of the house itself is a mystery, as it was never a tavern.
+                </p>
+            </div>
+        </div>
+        <div id="statistics">
+            <section>
+                <h2>Little Creek Residents</h2>
+                <div>
+                <p>Population</p>
+                <span id="population">248</span>
+                </div>
+                <div>
+                    <hr>
+                    <div><p>Unemployment Rate</p><span id="unemployment_rate">8.7%</span></div>
+                    <hr>
+                    <div><p>Poverty Rate</p><span id="poverty_rate">20.2%</span></div>
+                    <hr>
+                    <div><p>Non-Citizens</p><span id="non-citizen_rate">1.7%</span></div>
+                    <hr>
+                </div>
+            </section>
+            <section id="demographics">
+                <h2>Little Creek Demographics</h2>
+                <div id="education">
+                    <p>Education Levels</p>
+                    <span class="national_info">National</span>
+                    <div class="graph">
+                        <div class="bar_graph" id="master_degree">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                            <div class="national_value">13%</div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Master's or higher</span>
+                            <span class="right-aligned">3%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="bachelor_degree">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                            <div class="national_value">21%</div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Bachelor's or higher</span>
+                            <span class="right-aligned">14%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="assosciate_degree">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                            <div class="national_value">29%</div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Assosciate's or higher</span>
+                            <span class="right-aligned">27%</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="racial_diversity">
+                    <p>Racial Diversity</p>
+                    <div class="graph">
+                        <div class="bar_graph" id="race_white">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>White</span>
+                            <span class="right-aligned">92%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="race_mixed">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Two or more races</span>
+                            <span class="right-aligned">5%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="race_hispanic">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Hispanic</span>
+                            <span class="right-aligned">3%</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="gender">
+                    <p>Gender</p>
+                    <div class="graph">
+                        <div class="bar_graph" id="gender_male">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Male</span>
+                            <span class="right-aligned">52%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="gender_female">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>Female</span>
+                            <span class="right-aligned">48%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="income">
+                <h2>Income</h2>
+                <div id="median_household">
+                    <p>Median Household Income</p>
+                    <span class="income_value">$54,167</span>
+                    <span class="national_income">National $69,021</span>
+                    <p>Household Income Brackets</p>
+                    <div class="graph">
+                        <div class="bar_graph" id="household_income_1">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>&lt;$25k</span>
+                            <span class="right-aligned">31%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="household_income_2">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$25-$44k</span>
+                            <span class="right-aligned">14%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="household_income_3">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$45-$74k</span>
+                            <span class="right-aligned">14%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="household_income_4">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$75-$149k</span>
+                            <span class="right-aligned">35%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="household_income_5">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$150k</span>
+                            <span class="right-aligned">6%</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="median_individual">
+                    <p>Median Individual Income</p>
+                    <span class="income_value">$34,226</span>
+                    <span class="national_income">National $34,429</span>
+                    <p>Individual Income Brackets</p>
+                    <div class="graph">
+                        <div class="bar_graph" id="ind_income_1">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>&lt;$15k</span>
+                            <span class="right-aligned">23%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="ind_income_2">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$15-$34k</span>
+                            <span class="right-aligned">31%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="ind_income_3">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$35-$64k</span>
+                            <span class="right-aligned">32%</span>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="bar_graph" id="ind_income_4">
+                            <div class="filled_bar"></div>
+                            <div class="unfilled_bar"></div>
+                        </div>
+                        <div class="graph_info">
+                            <span>$65k+</span>
+                            <span class="right-aligned">15%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <a href="#">
+            <picture>
+                <source srcset="images/medium/logo-medium.webp" media="(min-width:520px) and (max-width:1023px)">
+                <source srcset="images/large/logo-large.webp" media="(min-width:1024px)">
+                <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
+            </picture>
+        </a>
+        <div class="footer_chamber_info">
+            <span>Little Creek Chamber of Commerce</span>
+            <br>
+            <div>50324 Carway Road<br>Little Creek, Delaware 19901</div>
+        </div>
+        <div class="contact_info">
+            <p>info@littlcreekcc.org</p>
+            <p>+(9999)-7777-4012</p>
+            <p><a href="https://www.google.com/maps/place/Little+Creek,+DE+19901/">&#128205; Location Map</a></p>
+        </div>
+        <div class="bottom_of_footer">
+            <hr>
+            <div class="footer_info">
+                &copy; <span class="footer_year"></span> Little Creek Chamber
+                <span class="line">|</span> 
+                <span class="footer_author"><b>Nathaniel Dunham</b></span>
+                <span class="line">|</span> 
+                WDD 230 Project
+                <span class="line">|</span>
+            </div>
+            <div class="footer_date">
+                Last Modification: <span class="last_modified_date"></span> 
+            </div>
+        </div>
+    </footer>
+</body>

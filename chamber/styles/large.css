@@ -12,10 +12,10 @@
         margin: auto;
         grid-column: 3;
     }
-    #social-media {
+    .social-media {
         grid-column: 4;
     }
-    #header-logo {
+    .header-logo {
         grid-column: 1;
         width: 150px;
         max-width:214px;
@@ -52,7 +52,7 @@
         color: white;
     }
 
-    main {
+    #homepage {
         display: grid;
         grid-template-columns: 25% 50% 25%;
         grid-template-rows: calc(1/3) calc(1/3) calc(1/3);
@@ -84,7 +84,7 @@
     #weather, #event {
         width: auto;     
     }
-    #spotlights {
+    .spotlights {
         display: flex;
         flex-direction: column;
         grid-column: 3;
@@ -125,31 +125,31 @@
         margin: .1em .3em 0em .3em;
         justify-content:center;
     }
-    #bottom_of_footer {
+    .bottom_of_footer {
         grid-column: 1/4;
         grid-row: 2;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         margin-top: 0px;
     }
-    #bottom_of_footer hr {
+    .bottom_of_footer hr {
         grid-column: 1/3;
     }
-    #footer_chamber_info {
+    .footer_chamber_info {
         margin: auto 2em;
     }
-    #footer_chamber_info span {
+    .footer_chamber_info span {
         text-align: left;
         font-size: 26px;
     }
-    #footer_chamber_info div {
+    .footer_chamber_info div {
         font-size: 18px;
     }
-    #contact_info {
+    .contact_info {
         margin: auto;
         font-size: 18px;
     }
-    #bottom_of_footer #footer_info {
+    .bottom_of_footer .footer_info {
         display: block;
         grid-column: 1;
         grid-row: 2;
@@ -158,7 +158,7 @@
         line-height:0;
         text-align: right;
     }
-    #bottom_of_footer #footer_date {
+    .bottom_of_footer .footer_date {
         display: block;
         grid-row: 2;
         grid-column: 2;
@@ -167,5 +167,28 @@
         margin-left: .5em;
         line-height:0;
         text-align: left;
+    }
+
+    #demographics {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #discover_page {
+        display: grid;
+        grid-template-columns: 50% auto;
+    }
+    #discover_page section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #discover_page #statistics {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #discover_grid div picture:hover img {
+        transform:scale(1.05,1.05)
+    }
+    #discover_grid div picture img {
+        transition: filter, transform 0.5s;
     }
 }

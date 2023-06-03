@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The town of Little Creek's Chamber of Commerce website aims to
     provide valuable information, education, and resources to local businesses in the area of Little Creek.">
-    <title>Little Creek Chamber</title>
+    <title>Little Creek Chamber - Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
@@ -15,13 +15,12 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script rel="script" defer src="../scripts/script.js"></script>
     <script rel="script" defer src="scripts/script.js"></script>
     <script rel="script" defer src="scripts/windchill.js"></script>
 </head>
 <body>
     <header>
-        <a id="header-logo" href="#">
+        <a class="header-logo" href="#">
             <picture>
                 <source srcset="images/large/logo-large.webp" media="(min-width: 1024px)">
                 <source srcset="images/medium/logo-medium.webp" media="(min-width: 520px)">
@@ -38,13 +37,13 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <div id="social-media">
+        <div class="social-media">
             <a href="#"><img src="images/facebook.png" alt="facebook-logo"></a>
             <a href="#"><img src="images/linkedin.png" alt="linkedin-logo"></a>
         </div>
         <time datetime="2023-05-19 20:00"></time>
     </header>
-    <main>
+    <main id="homepage">
         <section class="hero">
             <h1>Welcome to Little Creek</h1>
             <button type="button" onclick="">Join the Chamber</button>
@@ -81,7 +80,7 @@
             <h2>News Release</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Et malesuada fames ac turpis egestas sed tempus urna et. At augue eget arcu dictum varius.</p>
         </section>
-        <div id="spotlights">
+        <div class="spotlights">
             <div class="spotlight">
                 <h2>Thankful Transport</h2>
                 <div><img src="images/moving_truck.png" alt="moving_truck_img"></div>
@@ -124,28 +123,28 @@
                 <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
             </picture>
         </a>
-        <div id="footer_chamber_info">
+        <div class="footer_chamber_info">
             <span>Little Creek Chamber of Commerce</span>
             <br>
             <div>50324 Carway Road<br>Little Creek, Delaware 19901</div>
         </div>
-        <div id="contact_info">
+        <div class="contact_info">
             <p>info@littlcreekcc.org</p>
             <p>+(9999)-7777-4012</p>
             <p><a href="https://www.google.com/maps/place/Little+Creek,+DE+19901/">&#128205; Location Map</a></p>
         </div>
-        <div id="bottom_of_footer">
+        <div class="bottom_of_footer">
             <hr>
-            <div id="footer_info">
-                &copy; <span id="footer_year"></span> Little Creek Chamber
+            <div class="footer_info">
+                &copy; <span class="footer_year"></span> Little Creek Chamber
                 <span class="line">|</span> 
-                <span id="footer_author"><b>Nathaniel Dunham</b></span>
+                <span class="footer_author"><b>Nathaniel Dunham</b></span>
                 <span class="line">|</span> 
                 WDD 230 Project
                 <span class="line">|</span>
             </div>
-            <div id="footer_date">
-                Last Modification: <span id="last_modified_date"></span> 
+            <div class="footer_date">
+                Last Modification: <span class="last_modified_date"></span> 
             </div>
         </div>
     </footer>

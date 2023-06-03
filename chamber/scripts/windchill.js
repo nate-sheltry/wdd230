@@ -27,6 +27,7 @@ function setWeatherValues(){
     __windChill.textContent = `${calcWindchill(temperature, windSpeed).toFixed(1)}${farenheit}`;
 }
 
-retrieveWeatherValues();
-setWeatherValues()
-
+if(document.querySelector("#weather")){
+    retrieveWeatherValues();
+    setWeatherValues();
+}
