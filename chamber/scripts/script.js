@@ -11,9 +11,12 @@ if(document.querySelector("#discover_page")){
     window.addEventListener('unload', () => {
         localStorage.setItem('lastVisited', date.getTime())
     });
-    const priorVisit = localStorage.getItem('lastVisited');
+    const priorVisit = localStorage.getItem('lastVisited') || 0;
     
     function findDays(value){
+        if(value = 0){
+            return [0, 0, 0, 0];
+        }
         let miliseconds = date.getTime() - value;
         let days = miliseconds/msToDay;
         let hours = (miliseconds%msToDay)/msToHr;
