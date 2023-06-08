@@ -29,7 +29,7 @@ thead {
 thead tr:nth-child(1) th{
     padding: .5em 0;
 }
-thead tr:nth-child(2) {
+thead tr:nth-child(even) {
     background-color:#353535;
     color: white;
 }
