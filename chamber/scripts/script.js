@@ -1,4 +1,5 @@
 const date = new Date();
+const re = new RegExp(/[A-Z\s\-]{7,}/i)
 
 if(document.querySelector("#discover_page")){
     const msToDay = 86400000;
@@ -41,6 +42,16 @@ const __header = document.querySelector("header");
 const __textYear = document.querySelector(".footer_year")
 const __modifiedDate = document.querySelector(".last_modified_date")
 const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+
+if(document.querySelector("#submissionTime")){
+    const __timeLabel = document.querySelector("#submissionTime");
+    function getDateAndTime(){
+        let currentTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        let currentDate = `${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}/${date.getFullYear()}, ${currentTime}`;
+        __timeLabel.value = currentDate;
+        console.log(__timeLabel.value)
+    }
+}
 
 __textYear.textContent = date.getFullYear();
 __modifiedDate.textContent = `${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}/${date.getFullYear()} ${time}`;

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The town of Little Creek's Chamber of Commerce website aims to
+    provide valuable information, education, and resources to local businesses in the area of Little Creek.">
+    <title>Little Creek Chamber - Thank You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script rel="script" defer src="scripts/script.js"></script>
+    <script rel="script" defer src="scripts/windchill.js"></script>
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="#">
+            <picture>
+                <source srcset="images/large/logo-large.webp" media="(min-width: 1024px)">
+                <source srcset="images/medium/logo-medium.webp" media="(min-width: 520px)">
+                <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
+            </picture>
+        </a>
+        <div>Little Creek<br><span>Chamber of Commerce</span></div>
+        <nav>
+            <ul class="navigation">
+                <li><a onclick="toggleMenu()">&#9776;</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#"><img src="images/facebook.png" alt="facebook-logo"></a>
+            <a href="#"><img src="images/linkedin.png" alt="linkedin-logo"></a>
+        </div>
+        <time datetime="2023-05-19 20:00"></time>
+    </header>
+    <footer>
+        <a href="#">
+            <picture>
+                <source srcset="images/medium/logo-medium.webp" media="(min-width:520px) and (max-width:1023px)">
+                <source srcset="images/large/logo-large.webp" media="(min-width:1024px)">
+                <img src="images/small/logo-small.webp" alt="Little Creek Chamber Logo">
+            </picture>
+        </a>
+        <div class="footer_chamber_info">
+            <span>Little Creek Chamber of Commerce</span>
+            <br>
+            <div>50324 Carway Road<br>Little Creek, Delaware 19901</div>
+        </div>
+        <div class="contact_info">
+            <p>info@littlcreekcc.org</p>
+            <p>+(9999)-7777-4012</p>
+            <p><a href="https://www.google.com/maps/place/Little+Creek,+DE+19901/">&#128205; Location Map</a></p>
+        </div>
+        <div class="bottom_of_footer">
+            <hr>
+            <div class="footer_info">
+                &copy; <span class="footer_year"></span> Little Creek Chamber
+                <span class="line">|</span> 
+                <span class="footer_author"><b>Nathaniel Dunham</b></span>
+                <span class="line">|</span> 
+                WDD 230 Project
+                <span class="line">|</span>
+            </div>
+            <div class="footer_date">
+                Last Modification: <span class="last_modified_date"></span> 
+            </div>
+        </div>
+    </footer>
+</body>

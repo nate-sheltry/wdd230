@@ -178,4 +178,23 @@
         grid-template-columns: 50% 50%;
     }
 
+    /**/
+    #joinpage form button{
+        width:50%;
+        height:2.5rem;
+        margin:auto;
+    }
+    #joinpage form .member-tiers {
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    #joinpage form .member-tiers .membership-tier{
+        display:flex;
+        flex-direction:column;
+        margin:auto;
+        border: 1px solid grey;
+    }
+
+
 }
