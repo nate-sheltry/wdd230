@@ -49,7 +49,6 @@ if(document.querySelector("#submissionTime")){
         let currentTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
         let currentDate = `${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}/${date.getFullYear()}, ${currentTime}`;
         __timeLabel.value = currentDate;
-        console.log(__timeLabel.value)
     }
 }
 
