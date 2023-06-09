@@ -15,7 +15,7 @@ if(document.querySelector("#discover_page")){
     const priorVisit = localStorage.getItem('lastVisited') || 0;
     
     function findDays(value){
-        if(value = 0){
+        if(value == 0){
             return [0, 0, 0, 0];
         }
         let miliseconds = date.getTime() - value;
