@@ -56,7 +56,7 @@
                         <li>Fundraising Coordination</li>
                     </ul>
                     <hr>
-                    <label for="npmember"><input type="radio" name="member" value="npmember" required>Non Profit Membership</label>
+                    <label for="npmember"><input type="radio" name="member" value="npmember" id="npmember" required>Non Profit Membership</label>
                     <hr>
                 </div>
                 <div class="membership-tier">
@@ -68,7 +68,7 @@
                         <li>Marketing Consultation</li>
                     </ul>
                     <hr>
-                    <label for="brmember"><input type="radio" name="member" value="brmember" required>Bronze Membership</label>
+                    <label for="brmember"><input type="radio" name="member" value="brmember" id="brmember" required>Bronze Membership</label>
                     <hr>
                 </div>
                 <div class="membership-tier">
@@ -81,7 +81,7 @@
                         <li>+ Homepage Advertising</li>
                     </ul>
                     <hr>
-                    <label for="smember"><input type="radio" name="member" value="smember" required>Silver Membership</label>
+                    <label for="smember"><input type="radio" name="member" value="smember" id="smember" required>Silver Membership</label>
                     <hr>
                 </div>
                 <div class="membership-tier">
@@ -95,20 +95,20 @@
                         <li>+ Event Discounts</li>
                     </ul>
                     <hr>
-                    <label for="gmember"><input type="radio" name="member" value="gmember" required>Gold Membership</label>
+                    <label for="gmember"><input type="radio" name="member" value="gmember" id="gmember" required>Gold Membership</label>
                     <hr>
                 </div>
             </fieldset>
             <fieldset>
-                <label for="fname">First Name*<input type="text" name="fname" required></label>
-                <label for="lname">Last Name*<input type="text" name="lname" required></label>
-                <label for="bposition">Business Position<input type="text" name="bposition" pattern="[A-Za-z\s\-]{7,}"></label>
-                <label for="email">Email Address*<input type="email" name="email" placeholder="johndoe@gmail.com" required></label>
-                <label for="phonenum">Phone Number*<input type="tel" name="phonenum" required></label>
-                <label for="bname">Business Name/Title*<input type="tel" name="bname" required></label>
-                <label for="bdescription">Business Description<textarea name="bdescription"></textarea></label>
+                <label for="fname">First Name*<input type="text" name="fname" id="fname" required></label>
+                <label for="lname">Last Name*<input type="text" name="lname" id="lname" required></label>
+                <label for="bposition">Business Position<input type="text" name="bposition" id="bposition" pattern="[A-Za-z\s\-]{7,}"></label>
+                <label for="email">Email Address*<input type="email" name="email" id="email" placeholder="johndoe@gmail.com" required></label>
+                <label for="phonenum">Phone Number*<input type="tel" name="phonenum" id="phonenum" required></label>
+                <label for="bname">Business Name/Title*<input type="tel" name="bname" id="bname" required></label>
+                <label for="bdescription">Business Description<textarea name="bdescription" id="bdescription"></textarea></label>
             </fieldset>
-            <label for="timesubmit" hidden>Date and Time<input name="timesubmit" id="submissionTime" required></label>
+            <label for="submissionTime" hidden>Date and Time<input name="submissionTime" id="submissionTime" required></label>
             <button onclick="getDateAndTime()">Submit</button>
         </form>
     </main>
