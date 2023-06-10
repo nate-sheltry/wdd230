@@ -196,5 +196,15 @@
         border: 1px solid grey;
     }
 
+    #joinpage form fieldset:nth-child(2) label input{
+        margin:.75em 0;
+        padding:.25em;
+        max-width: 24em;
+    }
+
+    #thankyou_page section p{
+        margin:3.5em 1.5em;
+    }
+
 
 }
