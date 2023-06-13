@@ -58,7 +58,6 @@ function displayProphets(info){
         nameHeader.textContent = `${value.name} ${value.lastname}`;
         birthDiv.textContent = `Date of Birth: `
         birthSpan.textContent = `${value.birthdate}`
-        console.log(value.birthdate)
         placeDiv.textContent = `Place of Birth: `
         placeSpan.textContent = `${value.birthplace}`
         childrenDiv.textContent = `Children: `
@@ -97,7 +96,6 @@ function displayProphets(info){
 
 async function getProphetData() {
     const data = await fetch(url).then(promise => {return promise.json()});
-    console.table(data.prophets);  // note that we reference the prophet array of the data object given the structure of the json file
     displayProphets(data.prophets);
 }
   
