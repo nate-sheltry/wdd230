@@ -206,5 +206,30 @@
         margin:3.5em 1.5em;
     }
 
+    .businesses {
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(370px, 2fr));
+        margin:auto;
+    }
+    .list {
+        display:flex;
+        flex-direction:row;
+        text-align: left;
+        justify-content:space-between;
+        margin: 0em;
+        align-items:center;
+    }
+    .list h2{
+        font-size: .8em;
+        margin: 0em;
+        margin-left: .5em;
+    }
+    .list p{
+        margin: 0em;
+    }
+    .list p:last-child{
+        margin-right: .5em;
+    }
+
 
 }

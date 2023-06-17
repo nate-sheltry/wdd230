@@ -1,0 +1,84 @@
+{
+    "1":{
+        "name":"Thankful Transport",
+        "motto":"\"We get it there for you!\"",
+        "email":"hello@thankfultransport.com",
+        "phonenumber":"+999-999-9999",
+        "website":"#thankfultransport.com",
+        "img":"./images/moving_truck.png",
+        "address":"3242 Vanilla-ice Drive Little Creek DE 19961",
+        "membership-lvl":2
+    },"2":{
+        "name":"Code Primera",
+        "motto":"An after school coding instructional program.",
+        "email":"contact@codeprimera.com",
+        "phonenumber":"+2359-429-0609",
+        "website":"#codeprimera.com",
+        "img":"./images/code_pencils.webp",
+        "address":"234 Acdc Road Little Creek DE 19961",
+        "membership-lvl":3
+    },"3":{
+        "name":"Build A Treefort",
+        "motto":"Over 1000 Plans!",
+        "email":"builda@treefort.com",
+        "phonenumber":"+4959-929-9909",
+        "website":"#treefort.com",
+        "img":"./images/tree_house.webp",
+        "address":"982 Toto Boulevard Little Creek DE 19961",
+        "membership-lvl":2
+    },"4":{
+        "name":"Paintless",
+        "motto":"Colr you life, we'll color your walls",
+        "email":"welcome@paintless.com",
+        "phonenumber":"+0034-921-7878",
+        "website":"#paintless.com",
+        "img":"./images/paintless.webp",
+        "address":"2274 Beatles Boulevard Little Creek DE 19961",
+        "membership-lvl":1
+    },"5":{
+        "name":"Humanity Affairs",
+        "motto":"Better Health, Happy Life",
+        "email":"contact@humanityaffairs.com",
+        "phonenumber":"+6754-627-1101",
+        "website":"#humanityaffairs.com",
+        "img":"./images/humanity_affairs.webp",
+        "address":"996 Astley Street Little Creek DE 19961",
+        "membership-lvl":1
+    },"6":{
+        "name":"Twelling Gas",
+        "motto":"Bringing Warmth to Millions",
+        "email":"contact@twellinggas.com",
+        "phonenumber":"+4292-956-0027",
+        "website":"#twellinggas.com",
+        "img":"./images/twelling_gas.webp",
+        "address":"2305 Police Drive Little Creek DE 19961",
+        "membership-lvl":1
+    },"7":{
+        "name":"Jonas Electric",
+        "motto":"Lighting the World, One Light at a Time",
+        "email":"contact@jonaselectric.com",
+        "phonenumber":"+2497-874-1798",
+        "website":"#jonaselectric.com",
+        "img":"./images/jonas_electric.webp",
+        "address":"261 Chapin Place Little Creek DE 19961",
+        "membership-lvl":2
+    },"8":{
+        "name":"Noble Suites",
+        "motto":"All are Royalty, at Noble",
+        "email":"weclome@noblesuites.com",
+        "phonenumber":"+9424-001-9923",
+        "website":"#noblesuites.com",
+        "img":"./images/noble_suites.webp",
+        "address":"234 Journey Circle Little Creek DE 19961",
+        "membership-lvl":1
+    },"9":{
+        "name":"Midnight Eye Security",
+        "motto":"Always keep one eye open.",
+        "email":"contact@midnighteyesecurity.com",
+        "phonenumber":"+3620-781-0091",
+        "website":"#midnighteyesecurity.com",
+        "img":"./images/midnight_eye_security.webp",
+        "address":"4985 Rolling Street Little Creek DE 19961",
+        "membership-lvl":2
+    }
+}

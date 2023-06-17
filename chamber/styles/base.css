@@ -256,10 +256,10 @@ main .hero button {
 .spotlight:last-of-type {
     display: none;
 }
-.spotlight div {
+.spotlight div, .businesses section img {
     height: 75px;
 }
-.spotlight div img {
+.spotlight div img, .businesses section img {
     max-height: 100%;
 }
 
@@ -670,4 +670,53 @@ footer a picture img {
     font-size:1.25em;
     text-shadow:1px 1px 3px var(--accent1-color), -1px -1px 3px var(--accent1-color);
     font-weight:bold;
+}
+/**/
+.businesses {
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(270px, 1fr));
+}
+
+#directory_page div:first-child{
+    display:flex;
+    justify-content:center;
+    margin:1em;
+}
+#directory_page button{
+    line-height: .7;
+    font-size:1.5em;
+    width: 2.7em;
+    min-width: 2.5em;
+    height: 2.7em;
+    min-height: 2.5em;
+    background-color:var(--secondary-color);
+    border-color:var(--accent1-color);
+    border-radius: .5em;
+    border-width: 3px;
+    margin: 0em 2em;
+    padding: .2em;
+}
+#directory_page button:hover{
+    background-color:var(--accent1-color);
+    border-color:var(--accent2-color);
+}
+
+.list {
+    display:flex;
+    flex-direction:column;
+    text-align: left;
+    margin: 0em;
+    grid-column:1/10;
+}
+.list:nth-child(even){
+    background-color:darkgrey;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.list h2 {
+    font-size: 1.2em;
+    text-align: left;
+}
+.list img {
+    display:none;
 }
