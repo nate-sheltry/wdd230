@@ -11,10 +11,7 @@ async function directoryPage(){
     const __gridButtons = document.querySelector('#directory_page').querySelectorAll('button')
     let URL = "./json/businesses.json"
     await fetchData(businessDict, URL)
-    console.log(businessDict)
-    console.log(businessDict[0])
     Object.keys(businessDict).forEach(business => {
-        console.log(businessDict[business])
         const businessTemplate = __businessTemplate.content.cloneNode(true).children[0]
         businessTemplate.children[0].textContent = businessDict[business].name;
         businessTemplate.children[1].src = businessDict[business].img;
@@ -23,9 +20,7 @@ async function directoryPage(){
         businessTemplate.children[4].querySelector('a').textContent = businessDict[business].website;
         businessTemplate.children[4].querySelector('a').href = businessDict[business].website;
         __businessesDiv.append(businessTemplate);
-        console.log('appended')
     })
-    console.log(__gridButtons)
     __gridButtons[0].addEventListener('click', () => {
         __businessesDiv.classList.toggle('listview', false)
         document.querySelectorAll('section').forEach((element) => {
@@ -42,10 +37,6 @@ async function directoryPage(){
 
 if(document.querySelector("#directory_page")){
     directoryPage()
-}
-
-function populateDirectory(array){
-    
 }
 
 if(document.querySelector("#discover_page")){
