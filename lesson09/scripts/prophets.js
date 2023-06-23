@@ -98,5 +98,5 @@ async function getProphetData() {
     const data = await fetch(url).then(promise => {return promise.json()});
     displayProphets(data.prophets);
 }
-  
-  getProphetData();
+
+getProphetData();
