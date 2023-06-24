@@ -177,7 +177,7 @@
     #discover_page {
         display: grid;
         grid-template-columns: 50% auto;
-        height:1550px;
+        height:1510px;
     }
     #discover_page section {
         grid-column: 1;
