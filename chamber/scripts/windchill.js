@@ -28,7 +28,6 @@ function capitalizeString(string){
 async function apiFetch(){
     const data = await fetch(url).then(res => res.json()).then(result => {return result})
     .catch(error => console.error(error))
-    console.log(data)
     setWeatherValues(data);
 }
 
