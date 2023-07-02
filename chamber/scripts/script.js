@@ -2,9 +2,84 @@ const date = new Date();
 const re = new RegExp(/[A-Z\s\-]{7,}/i)
 let businessDict = {};
 
+function thankyouPage(){
+if(document.querySelector("#thankyou_page")){
+    const page = document.querySelector("#thankyou_page")
+    const searchQuery = new URLSearchParams(window.location.search)
+    const membership = searchQuery.get('membership')
+    if(membership == null){
+        return
+    }
+    if(membership != 'yes'){
+        page.querySelector('section').querySelector('p').innerHTML = 
+        "Become a member <a href=\"join.html\">now</a>, and for choosing to participate in the Little Creek business community.";
+    }
+}
+}
+
+thankyouPage()
+
 async function fetchData(array, url){
     await fetch(url).then(response => response.json()).then(result => {businessDict = result})
 }
+function setSpotlight(spotlight, object){
+    spotlight.querySelector('h2').textContent = object.name;
+    spotlight.querySelector('img').src = object.img;
+    const spans = spotlight.querySelectorAll('span')
+    spans[0].textContent = object.email;
+    spans[1].textContent = object.phonenumber + object.website.replace('#', ' www.');
+}
+async function homepage(){
+    const __spotlights = document.querySelectorAll(".spotlight");
+    let URL = "./json/businesses.json"
+    await fetchData(businessDict, URL)
+    let member2 = [];
+    let member3 = [];
+    let keys = Object.keys(businessDict);
+    for(let i = 0; i < keys.length;i++){
+        if(businessDict[keys[i]]['membership-lvl'] == 2){
+            member2.push(businessDict[keys[i]]);
+        }
+        if(businessDict[keys[i]]['membership-lvl'] == 3){
+            member3.push(businessDict[keys[i]]);
+        }
+    }
+    let i = 0;
+    while(i < 3){
+        if(member3[i] != undefined){
+            let random_num = (Math.floor(Math.random() * member3.length))
+            let object = member3[random_num]
+            if(__spotlights[i-1] != undefined){
+                if(__spotlights[i-1].querySelector('h2').textContent == object.name){
+                    if(member3[random_num-1]){
+                        object = member3[random_num-1]
+                    }
+                    else if(member3[random_num+1]){
+                        object = member3[random_num+1]
+                    }
+                }
+            }
+            setSpotlight(__spotlights[i], object)
+        }
+        else if(member2[i] != undefined){
+            let random_num = (Math.floor(Math.random() * member2.length))
+            let object = member2[random_num]
+            if(__spotlights[i-1] != undefined){
+                if(__spotlights[i-1].querySelector('h2').textContent == object.name){ 
+                    if(member2[random_num-1]){
+                        object = member2[random_num-1]
+                    }
+                    else if(member2[random_num+1]){
+                        object = member2[random_num+1]
+                    }
+                }
+            }
+            setSpotlight(__spotlights[i], object)
+        }
+        i++;
+    }
+}
+
 async function directoryPage(){
     const __businessTemplate = document.querySelector('template')
     const __businessesDiv = document.querySelector('.businesses')
@@ -35,8 +110,20 @@ async function directoryPage(){
     })
 }
 
+function handleCheckbox(checkbox){
+    const checkboxes = document.getElementsByName('membership');
+    checkboxes.forEach(item => {
+        if(item !== checkbox) {
+            item.checked = false;
+        }
+    })
+}
+
 if(document.querySelector("#directory_page")){
     directoryPage()
+}
+if(document.querySelector("#homepage")){
+    homepage()
 }
 
 if(document.querySelector("#discover_page")){

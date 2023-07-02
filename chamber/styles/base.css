@@ -347,7 +347,6 @@ footer {
 
 footer a {
     display:block;
-    width: 300px;
     margin: auto;
 }
 footer a picture {
@@ -672,7 +671,7 @@ footer a picture img {
     text-shadow:1px 1px 3px var(--accent1-color), -1px -1px 3px var(--accent1-color);
     font-weight:bold;
 }
-/**/
+/*directory page*/
 .businesses {
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(270px, 1fr));
@@ -720,4 +719,73 @@ footer a picture img {
 }
 .list img {
     display:none;
+}
+
+/*contact page*/
+
+#contact_page section form fieldset label {
+    display:flex;
+    flex-direction:column;
+    margin: auto;
+    margin-bottom:.5em;
+    text-align:left;
+    font-size:1.1em;
+}
+#contact_page section form fieldset label input {
+    margin-top:.3em;
+    height:2em;
+}
+#contact_page section form div {
+    grid-column:1/3;
+    margin:1.5em auto 1.5em auto;
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+}
+#contact_page section form div label {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    gap:.5em;
+    margin-top:.5em;
+    margin-left:0;
+}
+#contact_page section form label:last-of-type textarea {
+    min-height: 10em;
+    width:100%;
+}
+
+#contact_page section form  div label input {
+    min-width:2em;
+    min-height:2em;
+}
+
+#contact_page section form button {
+    margin:auto;
+    min-width:13em;
+    min-height:3em;
+}
+#contact_page section h1 {
+    font-size:1.5em;
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    text-shadow: 1px 0px 2px var(--primary-color);
+    text-shadow: 0px 0px 4px var(--accent1-color);
+}
+#contact_page section h2 {
+    font-size:1.5em;
+}
+#contact_page section h4 {
+    color:var(--accent2-color);
+    text-shadow: 0px 1px 1px var(--primary-color), 1px 0px 1px var(--primary-color);
+    font-size: 1.25em;
+    margin: 1em auto .5em auto;
+}
+#contact_page section p {
+    font-size: 1.1em;
+    margin: .25em auto .25em auto;
+}
+#contact_page section {
+    display:flex;
+    flex-direction:column;
 }

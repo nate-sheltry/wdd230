@@ -231,5 +231,51 @@
         margin-right: .5em;
     }
 
+    /*contact page*/
+    #contact_page section form fieldset{
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+    }
+    #contact_page section form fieldset label {
+        flex-basis:100%;
+    }
+    #contact_page section form fieldset label:nth-of-type(4),
+    #contact_page section form fieldset label:nth-of-type(5) {
+        margin-left: 0;
+        margin-right: 0;
+        flex-basis:49%;
+    }
+    #name, #organization, #maddress {
+        min-width: 18em;
+    }
+    #email,
+    #phonenum {
+        min-width: 10em;
+        width: auto;
+        max-width:100%;
+    }
+    #contact_page section form fieldset label input {
+        flex-basis:64%;
+        min-height:1.5em;
+        width: 50%;
+        max-width:25em;
+    }
+    #contact_page section form label:last-of-type textarea {
+        min-width:25em;
+        max-width:75%;
+    }
+    #contact_page section form label:last-of-type{
+        text-align:left;
+    }
+    #contact_page section form button {
+        margin:auto;
+        min-width:15em;
+        min-height:2em;
+    }
+    #contact_page section form  div label input {
+        min-width:1.25em;
+        min-height:1.25em;
+    }
 
 }
