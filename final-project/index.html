@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bountiful Foods is an organic and healthy eating focused company, working towards making
+    nutritious foods convenient for the customer. We are based in Carlsbad, California and are for both long time residents and tourist new to the area.">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Bountiful Foods - Homepage</title>
+    <script src="scripts/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <picture>
+                    <source srcset="images/bountiful-foods-logo.webp" media="(min-width: 480px)">
+                    <img src="images/bountiful-foods-logo-small.webp" alt="logo">
+                </picture>
+            </a>
+        <span>Bountiful Foods</span>
+        </div>
+        <nav>
+            <a href="https://www.facebook.com"><img src="images/facebook.webp" alt="facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.webp" alt="twitter"></a>
+            <a href="https://www.twitter.com"><img src="images/twitter.webp" alt="instagram"></a>
+        </nav>
+        <div class="hamburger">☰</div>
+        <div class="pages">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="fresh.html">Fresh</a>
+                <a href="about-us.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+    <main id="homepage">
+        <div>
+            <picture id="hero_img">
+                <source srcset="images/hero-big.webp" media="(min-width: 1024px)">
+                <source srcset="images/hero-normal.webp" media="(min-width: 500px)">
+                <img src="images/hero-small.webp" alt="hero_img.webp">
+            </picture>
+            <h1><a href="fresh.html">Drink Nature's Gift</a></h1>
+        </div>
+        <section>
+            <h2>Summary</h2>
+            <p>Welcome, to Bountiful Foods! Located in Carlsbad, California.
+                Full of fun, Carlsbad has attractions such as LEGOLAND, the Flower Fields, multiple beaches, and various festivals/events throughout the year!</p>
+        </section>
+        <section id="weather">
+            <h2>Weather</h2>
+            
+        </section>
+        <section id="drinks">
+            <h3>Drinks</h3>
+            <span id="drinks_num"></span>
+        </section>
+        <template data-src="weather_day">
+            <div class="weather_day">
+                <h3>title</h3>
+                <picture>
+                    <img src="" alt="weather_img">
+                </picture>
+                <div class="weather_info">
+                    <span class="temperature">42°F</span>
+                    <span class="weather_descriptor">Partly Cloudy</span>
+                </div>
+                <hr>
+                <div class="weather_chill_speed">
+                    <span>Wind Speed:</span><span class="wind_speed">4 mph</span>
+                    <span>Wind Chill:</span><span class="wind_chill"></span>
+                </div>
+            </div>
+        </template>
+    </main>
+    <footer>
+        <div class="logo">
+            <a href="index.html">
+                <picture>
+                    <source srcset="images/bountiful-foods-logo.webp" media="(min-width: 480px)">
+                    <img src="images/bountiful-foods-logo-small.webp" alt="logo">
+                </picture>
+            </a>
+        <span>Bountiful Foods</span>
+        </div>
+        <nav>
+            <a href="www.facebook.com"><img src="images/facebook.webp" alt="facebook"></a>
+            <a href="www.twitter.com"><img src="images/instagram.webp" alt="twitter"></a>
+            <a href="www.instagram.com"><img src="images/twitter.webp" alt="instagram"></a>
+        </nav>
+        <div>Last Modified Date:<span id="last_modified_date"> </span></div>
+    </footer>
+</body>
+</html>

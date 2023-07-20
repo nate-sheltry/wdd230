@@ -1,0 +1,538 @@
+:root {
+    --heading-font: Kalam;
+    --paragraph-font: "Open Sans", sans-serif;
+
+    --primary-color:#1E6F30;
+    --secondary-color:#AE2025;
+    --heading-color:#6CC24A;
+    --shadow-color:rgba(100, 170, 213, 0.5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    
+}
+h1 {font-size:36px;color:var(--primary-color);}
+h2 {font-size:24px;margin-left:1.2em;}
+h3 {font-size:20px;}
+p, span, label {font-family:var(--paragraph-font); font-size:16px;}
+p{padding:.2em 1.5em; font-weight:500;}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:#1E6F30;
+}
+footer {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    background-color:#1E6F30;
+}
+
+header nav {
+    margin: auto;
+}
+footer nav {
+    margin: auto;
+}
+
+header nav a img, footer nav a img {
+    width: 2em;
+    margin:auto -.2em;
+    transition: transform .2s;
+}
+header nav a img:hover, footer nav a img:hover {
+    transform: scale(1.1, 1.1);
+}
+.logo a {
+    width: 100%;
+    margin:0;
+}
+.logo picture img {
+    width: 50%;
+}
+.logo picture {
+    display:flex;
+    height: fit-content;
+    margin: auto;
+    justify-content: center;
+}
+.logo {
+    max-width: 125px;
+    text-align:center;
+    font-size: 20px;
+    transition: transform .2s;
+    margin:0;
+    margin-left:10vw;
+}
+.logo:hover {
+    transform: scale(.98, .98)
+}
+.logo span, .pages nav a {
+    font-family:var(--heading-font);
+    color:var(--heading-color);
+    text-shadow: 1px 0px 1px var(--heading-color);
+}
+
+header nav a, footer nav a {
+    margin: .3em;
+    font-family: var(--header-font);
+}
+.hamburger{
+    margin: auto;
+    margin-right:6vw;
+    padding: .25em .10em;
+    font-size: 32px;
+    font-weight: bold;
+    text-align:center;
+    transition: transform .2s;
+}
+.hamburger:hover{
+    color: white;
+    background-color:var(--heading-color);
+    border: 1px solid var(--heading-color);
+    border-radius: 7.5px;
+    transform:scale(1.025, 1.025);
+}
+
+.pages {
+    width:auto;
+    display: block;
+    grid-column:1/4;
+}
+
+.pages nav {
+    display: flex;
+    flex-flow:column;
+    justify-content: space-around;
+    text-align:center;
+    overflow:hidden;
+    height:auto;
+    max-height: 0;
+    transition:max-height .5s ease-out, transform .3s ease;
+    transform:scale(1, .5);
+}
+.pages.show nav {
+    max-height: 165px;
+    transform:scale(1, 1);
+}
+
+
+.pages nav a {
+    padding: .5em;
+    margin:0;
+    text-decoration:none;
+    font-size:24px;
+}
+.pages nav a:hover {
+    background-color: var(--heading-color);
+    color:white;
+    text-shadow: 1px 0px 1px white;
+}
+
+#hero_img {
+    width:auto;
+    margin:0;
+    padding:0;
+}
+#hero_img img {
+    width:calc(100% - 10px);
+    height:100%;
+    object-fit:cover;
+    max-height: 500px;
+    border:5px solid var(--secondary-color);
+}
+footer div:first-child {
+    margin-right: auto;
+}
+
+section {
+    border:3px solid var(--secondary-color);
+    border-radius: 1em;
+    box-shadow: .25em .35em .3em var(--shadow-color);
+    margin: 2em .5em;
+}
+.weather_day hr{
+    border-color:var(--heading-color);
+    border-radius:10px;
+    margin-left: .25em;margin-right: .25em;
+}
+
+.weather_day {
+    font-size:1.1em;
+    margin: 1em .5em;
+    box-shadow: 5px 5px 10px var(--shadow-color);
+    border: 2px solid var(--shadow-color);
+    border-radius: 10px;
+}
+.weather_day h3 {
+    text-align:center;
+}
+.weather_day picture {
+    display:flex;
+}
+.weather_day picture img {
+    width: 100%;
+    max-width: 75px;
+    object-fit:cover;
+    margin:auto;
+}
+
+.weather_chill_speed{
+    display:flex;
+    flex-flow:row;
+    flex-wrap:wrap;
+}
+.weather_chill_speed span{margin-top: .5em;margin-bottom: .5em;}
+.weather_chill_speed span:nth-of-type(1),
+.weather_chill_speed span:nth-of-type(3){
+    flex-basis:50%;
+    text-align:left;
+    margin-left:4%;
+}
+.weather_chill_speed span:nth-of-type(2),
+.weather_chill_speed span:nth-of-type(4){
+    flex-basis:34%;
+    text-align:right;
+    margin-right:4%;
+}
+.weather_info{display:flex; flex-direction:column;align-items:center;}
+.temperature {
+    font-size:2.25em;
+    font-weight: bold;
+}
+#homepage section {
+    margin-left:1.5em;
+    margin-right:1.5em;
+}
+#homepage h1 {
+    display:block;
+    margin-top:-3em;
+    margin-left:10vw;
+    margin-bottom:3em;
+    text-shadow:2px 1px 1px var(--heading-color),
+                -1px -.5px 1px rgba(0,0,0,.5);
+}
+#homepage h1 a {
+    text-decoration:none;
+    color:var(--primary-color);
+}
+#homepage h1 a:hover {
+    color:white;
+    text-shadow:5px 2px 1px var(--primary-color),
+                -1px -.5px 1px rgba(0,0,0,.5);
+}
+#drinks h3{
+    margin-left:1.2em;
+}
+#drinks_num{
+    display:flex;
+    font-weight:bold;
+    font-size:22px;
+    text-align:center;
+    justify-content:center;
+    margin-bottom:1.5em;
+}
+
+/*Fresh Page*/
+#freshpage form {
+    width: 85%;
+    margin:2.5em auto;
+}
+#freshpage form fieldset{
+    display:flex;
+    flex-flow:column;
+    width:auto;
+    margin:.25em 0;
+    font-size:20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 5px 2.5px 5px var(--shadow-color);
+}
+#freshpage form fieldset p{
+    margin:auto auto 1em auto;
+    font-weight:600;
+}
+#freshpage form fieldset:nth-child(1) label,
+#freshpage form fieldset:nth-child(3) label{
+    display:flex;
+    flex-flow:column;
+}
+#freshpage form fieldset:nth-child(2) label{
+    display:flex;
+    flex-flow:row;
+    gap:.5em;
+}
+#form_submitted {
+    display:none;
+}
+#form_submitted h3 {
+    margin-left:1.2em;
+}
+#form_submitted #firstname{
+    font-weight:bold;
+}
+#instructions {
+    resize:vertical;
+    min-height:10em;
+}
+#submit {
+    width:100%;
+    height:2.5em;
+    margin-top:1em;
+}
+.fruit {
+    display:block;
+    height:1.75em;
+    width:1.75em;
+    margin-right:.75em;
+}
+#freshpage form fieldset:nth-child(1) input {
+    height:1.75em;
+    margin-top:.25em;
+}
+#freshpage form fieldset:nth-child(1) label {
+    margin-top: .25em;
+    margin-bottom: .75em;
+}
+#freshpage form fieldset:nth-child(2) label {
+    margin: .75em 0;
+    align-items:center;
+    font-weight:500;
+}
+footer div:last-of-type {
+    flex-basis: 98%;
+    margin:.75em auto .25em;
+    text-align:center;
+    font-family:var(--paragraph-font);
+    font-weight:600;
+    color:yellow;
+}
+/*About Us Page*/
+#about_us{
+    display:flex;
+    flex-direction:column;
+
+}
+#about_us h1{
+    text-align:center;
+}
+#about_us section{
+    margin: 1em 1.5em;
+}
+#about_us section h3{
+    margin-left: 1.2em;
+}
+#about_us section p {
+    font-weight:500;
+}
+
+
+@media only screen and (min-width: 32.5em){
+    #homepage h1{
+        font-size: min(7vw, 48px);
+        top:25%;
+        left: 15%;
+    }
+    .hamburger {
+        margin-right:12vw;
+    }
+    footer nav, header nav{
+        margin-right:12vw;
+    }
+    #weather{
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    #weather h2 {
+        flex-basis: 100%;
+        margin-left:1.5em;
+    }
+    .weather_day{
+        max-width:240px;
+    }
+    /*Fresh Page*/
+    #form_submitted {
+        display:none;
+        grid-template-columns:auto auto;
+    }
+    #form_submitted h3{
+        grid-column:1/3;
+    }
+    #form_submitted #firstname, #form_submitted #mail,
+    #form_submitted #number {
+        grid-column:1;
+    }
+    #form_submitted p:nth-child(5), #form_submitted #fruits {
+        grid-column:2;
+    }
+    #form_submitted p:nth-child(5){grid-row:2;}
+    #form_submitted #fruits {grid-row:3/5;}
+    #form_submitted p:nth-child(7){text-align:center;}
+    #form_submitted p:nth-child(7),
+    #form_submitted #customerinstructions{grid-column:1/3;}
+    
+    #freshpage form{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:space-between;
+    }
+    #freshpage form fieldset:nth-child(1){
+        flex-basis:40%;
+    }
+    #freshpage form fieldset:nth-child(1) p{
+        margin-top:1em;
+    }
+    #freshpage form fieldset:nth-child(2){
+        flex-basis:38%;
+    }
+    #freshpage form fieldset:nth-child(3){
+        flex-basis:100%;
+    }
+    #form_submitted p:nth-of-type(8){
+        grid-column:1/3;
+        text-align:center;
+    }
+    #nutrition{
+        grid-column:1/3;
+        margin:auto auto;
+    }
+}
+
+@media only screen and (min-width:45em){
+    /*About Us*/
+    #about_us{
+        flex-direction:row;
+        flex-wrap:wrap;
+    
+    }
+    #about_us h1{
+        flex-basis:100%;
+        text-align:center;
+    }
+    #about_us section:nth-of-type(1){
+        flex-basis:38%;
+    }
+    #about_us section:nth-of-type(2){
+        flex-basis:50%;
+    }
+}
+
+
+@media only screen and (min-width: 64em){
+    #homepage {
+        display:grid;
+        grid-template-columns: auto min(70%, 40em);
+    }
+    #homepage h1{
+        font-size: 52px;
+        top:25%;
+        left: 15%;
+    }
+    #homepage h1 a{
+        text-decoration:underline;
+    }
+    h2{
+        margin-left:auto;
+        text-align:center;
+    }
+    #homepage div:first-of-type, #homepage h1:first-of-type, #homepage section:last-of-type{
+        grid-column:1/3;
+    }
+    #drinks h3{
+        margin-left:auto;
+        text-align:center;
+    }
+    #weather{
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    #weather h2{
+        flex-basis: 100%;
+        text-align:center;
+    }
+    .weather_day{
+        max-width:187px;
+        max-height:300px;
+        margin: 1em 0em;
+    }
+    .hamburger {
+        display:none;
+    }
+    header nav {
+        grid-column:3;
+    }
+    .pages {
+        grid-column: 2;
+        grid-row:1;
+    }
+    .pages nav {
+        flex-flow:row;
+        text-align:center;
+        max-height: 100px;
+        height:100%;
+        transition:max-height 0s ease-out, transform 0s ease;
+        transform:scale(1, 1);
+    }
+    .pages nav a {
+        display: flex;
+        padding:0;
+        align-items:center;
+        justify-content:center;
+        flex-basis:33%;
+        height:100%;
+        width:100%;
+
+    }
+    #homepage section h3 {
+        margin:1em auto;
+        text-align:center;
+    }
+    /*Fresh Page*/
+    #form_submitted {
+        display:none;
+        grid-template-columns:auto auto auto;
+        max-width:80%;
+        margin:auto auto 2em auto;
+    }
+    #form_submitted h3{
+        grid-column:1/4;
+        text-align:center;
+        margin:1em auto;
+    }
+    
+    #form_submitted p:nth-child(7){grid-row:2;grid-column:3}
+    #form_submitted #customerinstructions{grid-column:3;grid-row:3/5}
+    #freshpage form{
+        justify-content:space-around;
+    }
+    #freshpage form fieldset:nth-child(1){
+        flex-basis:30%;
+    }
+    #freshpage form fieldset:nth-child(2){
+        flex-basis:23%;
+    }
+    #freshpage form fieldset:nth-child(3){
+        flex-basis:35%;
+    }
+    #freshpage form button{
+        white-space:nowrap;
+        width:5em;
+        height:2em;
+        margin:1em 20em;
+    }
+    #form_submitted p:nth-of-type(8){
+        grid-column:1/4;
+        text-align:center;
+    }
+    #nutrition{
+        grid-column:1/4;
+    }
+}
